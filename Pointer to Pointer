@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int num = 10;        // Declare an integer variable
+    int *ptr   = &num;   // Pointer to integer
+    int **dptr = &ptr;   // Pointer to integer pointer
+
+    printf("value of num %d\n",num);
+    printf("address of num %x\n",&num);
+    printf("value of ptr %x\n",ptr);
+    printf("address of ptr %x\n",&ptr);
+    printf("value pointed by ptr %d\n",*ptr);
+    printf("adress of value that pointed by ptr %x\n",&*ptr);
+    printf("value of dptr %x\n",dptr);
+    printf("addres of dptr %x\n",&dptr);
+    printf("value pointed by dptr %x\n",*dptr);
+    printf("address of the value that pointed by dptr %x\n",&*dptr);
+    printf("%d\n",**dptr);
+    printf("%x\n",&**dptr);
+
+}
