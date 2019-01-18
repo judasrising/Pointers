@@ -1,0 +1,26 @@
+#include<stdio.h>
+#define N 5
+
+int main()
+{
+    int arr[N], *ptr;
+    ptr=arr;
+
+    printf("Enter %d elements of the array: \n",N);
+
+    for(; ptr<&arr[N]; ptr++)
+         scanf("%d",ptr);
+
+    printf("Array elements: ");
+
+    for(ptr=&arr[0]; ptr<&arr[N]; ++ptr)
+        printf("%d ", *ptr);
+
+}
+
+/*last for loop can be replaced by:
+
+  ptr=&arr;
+  for(int i=0; i<N; i++)
+      printf("%d ", *(ptr+i)); */
+      
