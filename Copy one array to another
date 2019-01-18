@@ -1,0 +1,36 @@
+#include<stdio.h>
+#define MAX 5
+int arr_a[MAX], arr_b[MAX];
+
+void make_array(int arr[MAX])
+{
+    int *ptr=arr_a;
+    for(; ptr<&arr[MAX]; ptr++)
+        scanf("%d",ptr);
+}
+
+void display(int arr[MAX])
+{
+    int *ptr=arr;
+    for(; ptr<&arr[MAX]; ptr++)
+        printf("%d ",*ptr);
+}
+
+void copy(int arr1[MAX],int arr2[MAX])
+{
+    int i=0;
+    for(; i<MAX; i++)
+        arr2[i]=arr1[i];
+}
+
+
+int main()
+{
+    printf("Enter elements: \n");
+    make_array(arr_a);
+    display(arr_a);
+    copy(arr_a, arr_b);
+    printf("\n");
+    display(arr_b);
+
+}
