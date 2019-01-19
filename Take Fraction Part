@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+void decompose(double x, long *int_part, double *frac_part)
+{
+    *int_part=(long)x;
+    *frac_part=x-*int_part;
+}
+
+int main()
+{
+    double num, frac;
+    long integer;
+    printf("Enter a number: ");scanf("%lf",&num);
+
+    decompose(num,&integer,&frac);
+
+    printf("integer part= %d\nFraction part= %f",integer,frac);
+
+
+}
