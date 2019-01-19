@@ -9,6 +9,14 @@ void make_array(int arr[MAX])
         scanf("%d",ptr);
 }
 
+void make_random(int arr[N])
+{
+    srand(time(NULL));
+    int *ptr=arr;
+    for(; ptr<&arr[N]; ptr++)
+        *ptr=+2+rand()%+10;
+}
+
 void display(int arr[MAX])
 {
     int *ptr=arr;
@@ -32,5 +40,9 @@ int main()
     copy(arr_a, arr_b);
     printf("\n");
     display(arr_b);
+    
+    printf("\nRandom Array: ");
+    make_random(arr_a);
+    display(arr_a);
 
 }
