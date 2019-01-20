@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int *largest(int arr[],int N)
+{
+    int *max;
+    max=&arr[0];
+    for(int i=1; i<N; i++){
+        if(arr[i]>*max)
+            *max=arr[i];
+    }
+    return max;
+}
+
+int main()
+{
+    int size,*ptr,*Largest;
+    printf("Enter size: ");scanf("%d",&size);
+    int array[size];
+    printf("Enter elements: ");
+    ptr=array;
+    for(; ptr<&array[size]; ptr++)
+        scanf("%d",ptr);
+
+    Largest=largest(array,size);
+    printf("Largest element= %d",*Largest);
+}
