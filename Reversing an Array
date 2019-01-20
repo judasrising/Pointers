@@ -1,0 +1,16 @@
+#include<stdio.h>
+#define N 5
+
+int main()
+{
+    int *p, arr[N]={1,2,3,4,5};
+
+    for(p=&arr[N-1]; p>=&arr[0]; p--)
+        printf("%d ",*p);
+        
+    /*******Second Way********
+    for(p=arr+N-1; p>=arr; p--)
+         printf("%d ",*p);
+    */
+
+}
