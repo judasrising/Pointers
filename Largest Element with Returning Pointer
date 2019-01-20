@@ -21,6 +21,5 @@ int main()
     for(; ptr<&array[size]; ptr++)
         scanf("%d",ptr);
 
-    Largest=largest(array,size);
-    printf("Largest element= %d",*Largest);
+    printf("Largest element= %d",*largest(array,size));
 }
