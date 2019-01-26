@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define N 5
+#define row 2
+#define col 3
+
+int main()
+{
+    int A[row][col]={{5,10,15},{20,25,30}};
+
+    printf("A \t%d\n",A);
+    printf("*A \t%d\n",*A);
+    printf("**A \t%d\n",**A);
+    printf("A+1 \t%d\n",A+1);
+    printf("*(A+1) \t%d\n",*(A+1));
+    printf("**(A+1)\t%d\n",**(A+1));
+    printf("*A+1\t%d\n",*A+1);
+    printf("*(*A+1)\t%d\n",*(*A+1));
+    printf("*(*(A+1)+2)\t%d\n",*(*(A+1)+2));
+
+}
