@@ -20,3 +20,7 @@ void swap(int *p,int *q)
     *q=*p;
     *p=temp;
 }
+
+
+if they were normal integers, by the end of the functions they will be return their beginning value.
+since they are pointers, the changing remains.
