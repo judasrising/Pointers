@@ -3,30 +3,28 @@
 void two_largest(int arr[],int n, int *largest,int*second_largest)
 {
     *largest=*second_largest=arr[0];
-
-    for(int i=1; i<n; i++){
-        if(arr[i]>*largest){
+    int *ptr;
+    for(ptr=arr; ptr<arr+n; ptr++){
+        if(*ptr>*largest){
             *second_largest=*largest;
-            *largest=arr[i];
+            *largest=*ptr;
         }
-        else if(arr[i]>*second_largest)
-            *second_largest=arr[i];
     }
+
+
 }
 
 int main()
 {
-    int size,larg,s_larg;
-    printf("Enter size: ");scanf("%d",&size);
-    int array[size];
-
-    printf("Enter elements: ");
+    int size,largest,second_largest;
+    printf("Enter array size: ");scanf("%d",&size);
+    int arr[size];
+    printf("Enter %d elements: ",size);
     for(int i=0; i<size; i++)
-        scanf("%d",&array[i]);
+        scanf("%d",&arr[i]);
 
-    two_largest(array,size,&larg,&s_larg);
-
-    printf("Largest= %d\nSecond Largest= %d",larg,s_larg);
+    two_largest(arr,size,&largest,&second_largest);
+    printf("Largest= %d, Second largest= %d",largest,second_largest);
 }
 
 
