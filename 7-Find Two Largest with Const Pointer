@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define N 5
+
+void find_two_largest(const int *a, int n, int *largest, int *second_largest)
+{
+    int count=0;
+    *largest=*second_largest=*a;
+    for(; count<n; count++, a++){
+        if(*a>*largest){
+            *second_largest=*largest;
+            *largest=*a;
+        }
+    }
+
+}
+
+int main()
+{
+    int arr[N]={23,38,40,24,86},largest,second;
+    int *ptr=arr;
+    find_two_largest(ptr,N,&largest,&second);
+    printf("Largest= %d, Second Largest= %d",largest,second);
+}
