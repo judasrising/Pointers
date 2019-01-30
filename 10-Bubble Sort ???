@@ -6,8 +6,8 @@ void bubbleSort(int *const array,int size)
 
 
     int i,j;
-    for(i=0; i<size; i++){
-        for(j=0; j<size; j++){
+    for(i=0; i<size-1; i++){
+        for(j=0; j<size-1; j++){
             if(array[j]>array[j+1])
                 swap(&array[j],&array[j+1]);
         }
@@ -15,12 +15,12 @@ void bubbleSort(int *const array,int size)
 }
 
 void swap(int *ptr1,int *ptr2)
-    {
-        int temp;
-        temp=*ptr1;
-        *ptr1=*ptr2;
-        *ptr2=*ptr1;
-    }
+{
+    int temp;
+    temp=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=*ptr1;
+}
 
 int main()
 {
