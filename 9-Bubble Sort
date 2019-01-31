@@ -42,3 +42,38 @@ int main()
         printf("%d ",arr[i]);
 
 }
+
+
+**************************** Easier Way **********************************
+
+#include<stdio.h>
+#define N 10
+
+int main()
+{
+    int *a,i,j,temp,arr[N];
+
+    printf("Enter %d numbers: ",N);
+    for(i=0; i<N; i++)
+         scanf("%d",&arr[i]);
+
+    printf("\nYour array: ");
+    for(i=0; i<N; i++)
+        printf("%d ",arr[i]);
+
+    for(i=0; i<N; i++){
+        for(a=arr; a<arr+N; a++){
+            if(*a>*(a+1)){
+                temp=*a;
+                *a=*(a+1);
+                *(a+1)=temp;
+            }
+        }
+    }
+
+    printf("\n\nAfter sorting: ");
+    for(i=0; i<N; i++)
+        printf("%d ",arr[i]);
+
+    printf("\n");
+}
