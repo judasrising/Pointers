@@ -2,7 +2,7 @@
 
 void two_largest(int arr[],int n, int *largest,int*second_largest)
 {
-    *largest=*second_largest=arr[0];
+    *largest=*second_largest=arr[0];  // largest=second_largest=arr; ??????
     int *ptr;
     for(ptr=arr; ptr<arr+n; ptr++){
         if(*ptr>*largest){
