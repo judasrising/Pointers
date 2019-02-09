@@ -12,6 +12,22 @@ void bubbleSort(int *const array,int size)
                 swap(&array[j],&array[j+1]);
         }
     }
+    
+    /*****************************************
+    
+    int *p,i,temp;
+
+    for(i=0; i<size-1; i++){
+        for(p=array; p<array+size-1; p++){
+            if(*p>*(p+1)){
+                temp=*p;
+                *p=*(p+1);
+                *(p+1)=temp;
+            }
+        }
+    }
+    
+    *******************************************/
 }
 
 void swap(int *ptr1,int *ptr2)
