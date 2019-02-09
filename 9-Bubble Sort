@@ -27,7 +27,7 @@ void bubbleSort(int *const array,int size)
         }
     }
     
-    *******************************************/
+    ******************************************/
 }
 
 void swap(int *ptr1,int *ptr2)
